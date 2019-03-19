@@ -1,6 +1,5 @@
 <h1>1人掲示板</h1>
 
-<!-- 初期表示 -->
 <h4>
 <?php
   if(isset($_GET['name']) || isset($_GET['message'])){
@@ -9,7 +8,6 @@
 ?>
 </h4>
 
-<!-- 入力内容表示 -->
 <h4><?php
   if (isset($_POST['name'])) {
     $name = $_POST['name'];
