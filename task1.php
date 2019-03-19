@@ -1,38 +1,37 @@
-<h1>1lŒf¦”Â</h1>
+<h1>1äººæ²ç¤ºæ¿</h1>
 
-<!-- ‰Šú•\¦ -->
+<!-- åˆæœŸè¡¨ç¤º -->
 <h4>
 <?php
-if(!isset($_REQUEST['name']) && ! isset($_REQUEST['message'])){
- echo 'ˆê‰ñ‚¾‚¯“Še‚Å‚«‚Ü‚·';
-}
+  if(isset($_GET['name']) || isset($_GET['message'])){
+    echo 'ä¸€å›ã ã‘æŠ•ç¨¿ã§ãã¾ã™';
+  }
 ?>
 </h4>
 
-<!-- “ü—Í“à—e•\¦ -->
+<!-- å…¥åŠ›å†…å®¹è¡¨ç¤º -->
 <h4><?php
-if (isset($_REQUEST['name'])) {
-   $name = $_REQUEST['name'];
-   echo $name.'‚³‚ñ‚Ì“Še';
-}
+  if (isset($_POST['name'])) {
+    $name = $_POST['name'];
+    echo $name.'ã•ã‚“ã®æŠ•ç¨¿';
+  }
 ?></h4>
 <?php
-if(isset($_REQUEST['message'])){
-   $message = $_REQUEST['message'];
-  echo $message;
-}
+  if(isset($_POST['message'])){
+    $message = $_POST['message'];
+    echo $message;
+  }
 ?>
 
-<form action="" method="post">
-<br>
-Name
-<br>
-<input type="text" name="name" required>
-<br>
-Message
-<br>
-<input type="text" name="message" required>
-<br>
-<br>
-<input type="submit" value="‘—M">
+<form action="task1.php" method="post">
+  <br>
+  Name
+  <br>
+  <input type="text" name="name" required>
+  <br>
+  Message
+  <br>
+  <input type="text" name="message" required>
+  <br><br>
+  <input type="submit" value="é€ä¿¡">
 </form>
