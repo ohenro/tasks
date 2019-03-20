@@ -10,6 +10,7 @@
   }
 ?>
 
+<!-- URLを上書き -->
 <form action="task1.php" method="post">
   <br>
   <label for="name">Name</label>
