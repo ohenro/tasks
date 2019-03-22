@@ -1,37 +1,24 @@
 <h1>1人掲示板</h1>
 
-<!-- 初期表示 -->
-<h4>
 <?php
-  if(isset($_GET['name']) || isset($_GET['message'])){
-    echo '一回だけ投稿できます';
-  }
-?>
-</h4>
-
-<!-- 入力内容表示 -->
-<h4><?php
-  if (isset($_POST['name'])) {
-    $name = $_POST['name'];
-    echo $name.'さんの投稿';
-  }
-?></h4>
-<?php
-  if(isset($_POST['message'])){
-    $message = $_POST['message'];
-    echo $message;
+  if($_SERVER['REQUEST_METHOD'] == "POST"){
+    echo '<h3>'.$_POST['name'].'さんの投稿</h3>';
+    echo $_POST['message'];
+  }else{
+    echo '<h3>一回だけ投稿できます</h3>';
   }
 ?>
 
+<!-- URLを上書き -->
 <form action="task1.php" method="post">
   <br>
-  Name
+  <label for="name">Name</label>
   <br>
-  <input type="text" name="name" required>
+  <input type="text" name="name" id="name" required>
   <br>
-  Message
+  <label for="message">Message</label>
   <br>
-  <input type="text" name="message" required>
+  <input type="text" name="message" id="message" required>
   <br><br>
   <input type="submit" value="送信">
 </form>
